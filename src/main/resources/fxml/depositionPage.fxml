@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" styleClass="root" fx:controller="controllers.DepositionController"
+      alignment="TOP_CENTER" spacing="50" stylesheets="@/styles.css">
+    <padding>
+        <Insets top="30" left="20" right="20" bottom="40"/>
+    </padding>
+
+    <HBox spacing="19">
+        <Button prefWidth="40" fx:id="backButton">
+            <graphic>
+                <ImageView fitHeight="25" fitWidth="16" style="-fx-border-radius: 10" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../images/back-arrow.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+    </HBox>
+
+    <VBox alignment="CENTER" spacing="20">
+        <VBox.margin>
+            <Insets top="20"/>
+        </VBox.margin>
+
+        <Text fx:id="clientBalanceField"
+              text="Deposit Money" styleClass="heading-text">
+            <VBox.margin>
+                <Insets bottom="18"/>
+            </VBox.margin>
+        </Text>
+
+        <TextField fx:id="amountField" promptText="Enter the amount"
+                   maxWidth="150" prefWidth="150" minWidth="150" style="-fx-alignment: CENTER;" styleClass="input-field"/>
+
+        <ComboBox promptText="Choose your account"
+                  fx:id="clientIbans"
+                  styleClass="combo-box"/>
+
+        <Button text="Confirm"
+                maxWidth="150" prefWidth="150" minWidth="150" styleClass="confirm-button"  onAction="#handleDeposit"/>
+    </VBox>
+</VBox>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.MainPageController"
+      styleClass="main-container"
+      stylesheets="@/styles.css">
+
+    <Text text="Welcome!"
+          styleClass="welcome-text">
+        <VBox.margin>
+            <Insets bottom="30"/>
+        </VBox.margin>
+    </Text>
+
+    <TextField fx:id="passwordField"
+               promptText="Enter your password"
+               styleClass="input-field">
+        <VBox.margin>
+            <Insets bottom="10"/>
+        </VBox.margin>
+    </TextField>
+    <Button text="Login"
+            onAction="#login"
+            styleClass="login-button"/>
+</VBox>
