@@ -33,9 +33,9 @@ public class SelectionPageController extends BaseController {
 
     @FXML
     private Button logoutBtn;
-    // Get the ClientInformation object
+     // Get the ClientInformation object
     ClientInformation loggedInClient = SessionManager.getLoggedInClientInformation();
-    // Get all IBAN numbers for the client using the accounts relationship
+    // Get all Iban numbers for the client using the accounts relationship
     List<String> loggedInClientIbanNumbers = loggedInClient.getAccounts()
             .stream()
             .map(ClientAccount::getClientIban)
@@ -72,22 +72,3 @@ public class SelectionPageController extends BaseController {
         }
     }
 }
-
-
-
-
-
-
-
-
-/**
- @FXML
- public void accessWithdrawPage() throws IOException {
- stageUtil.loadAndDisplayStage(withdrawPageBtn, getClass().getResource("/fxml/withdrawalPage.fxml"));
- }
-
- @FXML
- public void accessEFTPage() throws IOException {
- stageUtil.loadAndDisplayStage(eftPageBtn, getClass().getResource("/fxml/eftPage.fxml"));
- }
-*/

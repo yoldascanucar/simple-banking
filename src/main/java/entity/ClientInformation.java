@@ -69,12 +69,12 @@ public class ClientInformation {
         this.clientPassword = clientPassword;
     }
 
-    // Fixed return type to specifically use ClientAccount
+
     public List<ClientAccount> getAccounts() {
         return accounts;
     }
 
-    // Fixed parameter type to specifically use ClientAccount
+
     public void setAccounts(List<ClientAccount> accounts) {
         this.accounts = accounts;
     }
